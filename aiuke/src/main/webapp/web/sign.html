@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>新用户注册</title>
+<link href="../css/home_login.css" rel="stylesheet" type="text/css">
+<link href="../css/layout.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/user.js"></script>
+<script type="text/javascript" src="../js/cookie_util.js"></script>
+<script>
+	$(function(){
+		$("#zhuce").click(adduser);
+		});
+		
+	</script>
+</head>
+<body>
+<div class="nc-login-layout">
+<div class="logoleft">
+    	<img src="../img/web-logo.png">
+        <img src="../img/slogan.png">
+    </div>
+	<div class="nc-login">
+		<div class="nc-login-title">
+			<h3>用户注册</h3>
+		</div>
+		<div class="nc-login-content">
+			<form id="register_form" method="post" action="">
+				<dl>
+					<dt>用户名</dt>
+					<dd style="min-height:54px;">
+					<input type="text" id="name" name="user_name" class="text tip" placeholder="3-20位字符" /><span id="warning_1"></span>
+					<label></label></dd>
+				</dl>
+				<dl>
+					<dt>设置密码</dt>
+					<dd style="min-height:54px;">
+					<input type="password" id="password" name="password" class="text tip" placeholder="6-16位字符" /><span id="warning_2"></span>
+					<label></label></dd>
+				</dl>
+				<dl>
+					<dt>确认密码</dt>
+					<dd style="min-height:54px;">
+					<input type="password" id="password_c" name="password_confirm" class="text tip" placeholder="请再次输入您的密码" /><span id="warning_3"></span>
+					<label></label></dd>
+				</dl>
+				<dl>
+					<dt>邮箱</dt>
+					<dd style="min-height:54px;">
+					<input type="text" id="email" name="email" class="text tip" placeholder="请输入常用的邮箱" />
+					<label></label></dd>
+				</dl>
+				<dl>
+					<dt>电话</dt>
+					<dd style="min-height:54px;">
+					<input type="text" id="tel" name="phone" class="text tip" placeholder="请输入现用的电话 " />
+					<label></label></dd>
+				</dl>
+				<dl>
+					<dt>&nbsp;</dt>
+					<dd>
+					<input id="zhuce" type="button" name="Submit" value="立即注册" class="submit fl" title="立即注册" />
+					<label></label></dd>
+				</dl>
+				<input type="hidden" value name="ref_url">
+				<input name="nchash" type="hidden" value="206f94ec" />
+			</form>
+			<div class="clear">
+			</div>
+		</div>
+		<div class="nc-login-bottom">
+		</div>
+	</div>
+</div>
+<script>
+$("#aaa").click(function(){
+	update();
+	});
+</script>
+</body>
+</html>

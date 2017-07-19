@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<script src="../js/jquery.js"></script>
+<script src="../js/aiuke.js"></script>
+<script src="../js/cookie_util.js"></script>
+<link href="../css/main-style.css" rel="stylesheet">
+<meta name="keywords" content="尤克里里、尤克里里教学、尤克里里视频、尤克里里曲谱、小吉他、小吉他教学、音乐资源分享、素材分享">
+<meta name="description" content="打造轻量化资源分享平台。AiUke，有你想要的！">
+<meta charset="utf-8">
+<script type="text/javascript">
+$(function(){
+	var name = getCookie("name");
+	if(name==null){
+		$(".name").hide();
+		$(".log").show();
+	}else{
+		$(".name").show();
+		$(".log").hide();
+		$("#namename").html(name);
+	}
+	
+	});
+</script>
+<script type="text/javascript"></script>
+<title>爱尤客—首页</title>
+</head>
+
+<body>
+<div class="header">
+	<div class="logo">
+    	<a href="index.html"><img src="../img/web-logo.png"></a>
+    </div>
+    <div class="search">
+        <div class="hpic">
+    	<img src="../img/slogan.png">
+        </div>
+    	<div>
+    	<input type="text" class="search_box" id="search_2">
+        <input type="button" class="search_icon" id="search_1">
+        </div>
+        <div class="name"><a id ="namename" href="user.html"></a></div>
+        <div class="log">
+        	<a href="login.html" id="log">登录</a><a href="sign.html">注册</a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div class="top_nav">
+	<ul class="center">
+    	<li><a href="index.html">首页</a></li>
+        <li style="position:relative;"><a href="video_tutoria.html">大神教程</a>
+        	<ul class="second_nav">
+            	<li><a href="subpage/qvtan.html">趣弹教程</a></li>
+                <li><a href="subpage/sir.html">张SIR教程</a></li>
+                <li><a href="subpage/lemmon.html">柠檬音乐</a></li>
+            </ul>
+        </li>
+        <li><a href="picture_tutoria.html">大神“有谱”</a></li>
+        <li><a href="commen.html">常用和弦</a></li>
+        <li><a href="recommen.html">购琴推荐</a></li>
+    </ul>
+</div>
+<script>
+$(".second_nav").hide()
+$(".center li").mouseenter(function(){
+	$(this).children().show()
+	})
+$(".second_nav").mouseleave(function(){
+	$(".second_nav").hide()
+	})
+</script>
+<div class="banner">
+	<div class="bancen">
+    	<img src="../img/banner_01.jpg" alt="广告1">
+    </div>        
+    <div class="bancen">
+    	<img src="../img/banner_02.jpg" alt="广告2">
+    </div>
+    <div class="bancen">
+        <img src="../img/banner_03.jpg" alt="广告3">
+    </div>
+        <div class="leftbtn">＜</div>
+	    <div class="rigbtn">＞</div>
+</div>
+<script>
+var a=0
+$(".bancen").hide().first().fadeIn(1000)
+$(".rigbtn").click(function(){
+	if(a<$(".bancen").length-1){a++}
+	else{a=0}
+	$(".bancen").hide().eq(a).stop(true,true).fadeIn(1000)
+})
+$(".leftbtn").click(function(){
+	if(a>0){a--}
+	else{a=$(".bancen").length-1}
+	$(".bancen").hide().eq(a).stop(true,true).fadeIn(1000)
+})
+</script>
+<div class="show">
+	<div class="main_col">
+    	<div class="main_ctrl">
+        	<video src="../video/jiushiaini.mp4" controls></video>
+        </div>
+    </div>
+    <div class="main_col">
+    	<div class="main_ctrl">
+        	<img src="../img/main_1.png" alt="推荐琴">
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="nomian_1"></div>
+<div class="footer">
+	<div class="center">
+    	<div class="second_col">
+        	<div class="second_ctrl">
+            	<img src="../img/address.png" alt="地址">
+                <span>山西省长治市长治学院</span>
+            </div>
+        </div>
+        <div class="second_col">
+        	<div class="second_ctrl">
+            	<img src="../img/phone.png" alt="电话">
+                <span>18835572996</span>
+            </div>
+        </div>
+    	<div class="second_col">
+        	<div class="second_ctrl">
+            	<img class="box" src="../img/wechat.png" alt="二维码">
+                <span>微信公众号</span>
+                <div class="erweim">
+                	<img src="../img/erweim.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="nomain_2"></div>
+    <h4>版权归Roy随意工作室所有 京ICP备</h4>
+</div>
+<script>
+$(".erweim").hide()
+$(".box").mouseenter(function(){
+	$(".erweim").show()
+	}).mouseleave(function(){
+		$(".erweim").hide()
+		})
+		$("#search_1").click(function(){
+			var mesg = $("#search_2").val();
+			if(mesg!=""){
+				sessionStorage.name=mesg;
+				window.location.href="hello.html";
+			}
+			
+		});
+
+</script>
+</body>
+</html>

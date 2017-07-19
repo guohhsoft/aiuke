@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="czxy.aiuke.dao.login">
+	<select id="findByname" parameterType="string" 
+	resultType="czxy.aiuke.entity.user">
+	select * from user where name=#{name}
+	</select>
+	<insert id="save" parameterType="czxy.aiuke.entity.user">
+		insert into user
+		(id,name,password,telephone,email)
+		values(#{id},#{name},#{password},#{telephone},#{email})
+	</insert>
+	<update id="update" parameterType="czxy.aiuke.entity.user">
+		update user set password=#{password}, 
+						telephone=#{telephone},
+						email=#{email}
+						where name=#{name}
+	
+	</update>
+</mapper>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body{ background-color:#b8fdd2; margin:0; padding:0;}
+.message{
+    width:989px;
+    background-color:#fff;
+    margin:0 auto;
+    border-collapse:collapse;
+}
+.message thead tr {
+    display:block;
+}
+.message tbody {
+    display: block;
+    height: 361px;
+    overflow: auto;
+}
+.message td ,.message th{
+    border:1px solid #aaa;
+    width:200px;
+    text-align: center;
+}
+</style>
+<script src="../js/jquery.js"></script>
+<script src="../js/aiuke.js"></script>
+<script>
+	$(function(){
+		var name =  sessionStorage["name"];
+		search(name);
+	});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+    <table class='message'>
+        <thead>
+        <tr>
+            <th>歌名</th>
+            <th>歌手名</th>
+            <th>查看</th>
+            <th>备注信息</th>
+        </tr>
+        </thead>
+        <tbody id="aiuke">
+        </tbody>
+    </table>
+
+</body>
+</html>

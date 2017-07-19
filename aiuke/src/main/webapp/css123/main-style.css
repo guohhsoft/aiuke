@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+/*CSS 重置*/
+	*{font-size: 12px; font-family:arial,微软雅黑;}
+	h1,h2,h3,h4,h5,h6{font-weight: normal; margin: 0;}
+	body,dl,dd,dt,p{margin:0;}
+	ul,li{margin:0; padding: 0;list-style: none}
+	input{outline:none;border: none;margin: 0;padding: 0;cursor:pointer;}
+	a{text-decoration:none;}
+	img{display:block;}
+	.clearfix{clear:both;}
+	.body{ background-color:#ccc;}
+	
+/*首页样式*/
+.header{ max-width:1200px; margin:0 auto; margin-top:30px;}
+.logo{ float:left;}
+.hpic{ float:right; margin-bottom:2px;}
+.search{ float:right; margin-top:5px;}
+.search_box{ width:228px; height:22px; border:1px solid #000; cursor:auto; float:left;}
+.search_icon{ width:33px; height:24px; background-image:url(../img/go.png);float:left;}
+
+.top_nav{ background-image:url(../img/nav_bg.png); height:70px; width:100%; background-repeat:repeat-x; margin-top:20px;}
+.center{ max-width:1200px; margin:0 auto;}
+.center>li{ float:left; width:20%; text-align:center; }
+.center>li>a{ font-size:16px; line-height:70px;color:#fff;}
+.center a:hover{color:#e9551c; font-weight:bold;}
+.second_nav{ position:absolute; z-index:3; background-color:#f28f1e; width:100%;}
+.second_nav>li{ text-align:center; border-bottom:1px solid #e9551c;}
+.second_nav>li>a{ font-size:14px; color:#fff; line-height:40px;}
+.second_nav>li>a:hover{color:#e9551c; font-weight:bold;}
+
+.banner{ overflow:hidden; position:relative;}
+.bancen img{position:relative;left: 50%; margin-left: -960px;}
+.bancen{max-width:1200px;margin: 0 auto;position:relative;}
+.leftbtn,.rigbtn{width:60px;height:60px;text-align: center;line-height: 60px;font-size:30px;background-color: #1a1a1a;color: #fff;font-weight:bold; border-radius:30px; opacity:0.5;}
+.leftbtn{position:absolute;left: 20px; top:50%;margin-top: -20px;cursor: pointer;}
+.leftbtn:hover{background-color:#e9551c;}
+.rigbtn{position:absolute;right: 20px; top:50%;margin-top: -20px;cursor: pointer;}
+.rigbtn:hover{background-color:#e9551c;}
+
+.show{ max-width:1200px; margin:0 auto; margin-top:40px;}
+.main_col{ float:left; width:50%;}
+.main_ctrl{ margin:0 30px;}
+.main_ctrl video{ width:100%; cursor:pointer;}
+.main_ctrl img{ margin:10px auto;cursor:pointer;}
+.nomian_1{ max-width:1200px; background-color:#e9551c; height:2px; margin:0 auto; margin-top:40px;}
+
+.footer{ background-color:#ededed; margin-top:60px;}
+.second_col{ float:left; width:33.3%;}
+.second_ctrl{padding:20px; position:relative;}
+.second_ctrl img{ margin:0 auto; margin-bottom:10px;}
+.second_ctrl span{ text-align:center; line-height:20px; color:#333; display:block;}
+.nomain_2{ height:2px; width:100%; background-color:#000;}
+.footer h4{ text-align:center; line-height:30px;}
+.erweim{ width:150px; height:150px; position:absolute; top:-150px; left:50%; margin-left:-75px; z-index:999;}
+.erweim img{ width:100%;}
+
+/*曲谱页*/
+.continer{ max-width:1200px; margin:0 auto; margin-top:20px;}
+.col{ float:left; width:25%;}
+.col_ctrl{ margin:10px;}
+.picture{ width:100%; height:200px; overflow:hidden; padding:5px; background-color:#e5e5e5;}
+.col_ctrl h4{ text-align:center; background-color:#e5e5e5; width:100%; padding:5px;}
+.col_ctrl>h4>a{ font-size:16px; color:#e9551c; line-height:40px;}
+.col_ctrl>h4>a:hover{ font-size:18px; color:#000;}
+.picture img{ width:100%;}
+.picture:hover{ width:100%; height:210px; overflow:hidden; padding:0;}
+/*淘宝店*/
+.container{ max-width:1200px; margin:0 auto; margin-top:20px;}
+.pic_col{ float:left; width:20%;}
+.pic_ctrl{ margin:10px 20px;; padding:10px;}
+.pic_ctrl img{ width:100%; box-shadow:10px 10px 5px rgba(0,0,0,0.3);}
+.pic_ctrl h6{ text-align:center; margin-top:10px;}
+.pic_ctrl h6 a{ font-size:18px; text-decoration:underline; line-height:30px;}
+.pic_ctrl h6 a:hover{ font-weight:bold; color:#e9551c;}
+
+
+
+
+/*four  page*/
+.commen{ max-width:1200px; margin:0 auto;}
+.com_ctrl>h1{ font-size:16px; font-weight:bold; text-align:center; margin-top:20px; color:#e9551c;}
+.com_ctrl>img{ margin:0 auto;}
+.top{ width:40px; height:40px; background-color:#e9551c;position:fixed; right:20px; bottom:20px; z-index:999; cursor:pointer;}
+.top img{ margin-top:6px;}

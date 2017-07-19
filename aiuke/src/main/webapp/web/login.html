@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{ margin:0; padding:0; background-image:url(../img/login_bg.png);}
+h1{ font-size:40px; text-align:center; font-family:微软雅黑; color:#FC7011;}
+.po_box{ width:400px; height:400px; background-color:rgba(229,229,229,0.8); border-radius:10px; position:absolute; left:50%; margin-left:-200px; top:50%; margin-top:-200px;}
+.cen_box{ width:390px; height:390px; margin:5px auto; background-color:#C6BBFD; border-radius:5px;}
+table{ width:380px; margin:0 auto;}
+td{ text-align:center; font-size:16px; line-height:40px; color:#fff;}
+#password_msg{ position:absolute; left:0; top:0;}
+</style>
+<meta charset="utf-8">
+<title>用户登录</title>
+<script src="../js/jquery.js"></script>
+<script src="../js/user.js"></script>
+<script src="../js/cookie_util.js"></script>
+<script>
+	$(function(){
+		$("#denglu").click(function(){
+		
+			var type=$("input:radio:checked").val();
+				if(type=="用户"){
+					login();
+				}
+		});
+	});
+</script>
+</head>
+
+<body>
+<h1>W&nbsp;e&nbsp;l&nbsp;c&nbsp;o&nbsp;m&nbsp;e</h1>
+<div class="po_box">
+	<div class="cen_box">
+    	<table height="385">
+        	<tr>
+            	<td height="59" colspan="2"  style="padding-top:20px;"><img src="../img/slogan.png"></td>
+            </tr>
+        	<tr>
+        		<td height="56">用户名：</td>
+       		  <td><input type="text" style="width:150px; height:24px;" id="count"></br><span id="count_msg"></span></td>
+       	  </tr>
+            <tr>
+        		<td height="55">密码：</td>
+        		<td><input type="password" style="width:150px; height:24px;" id="password"></br><span id="password_msg"></span></td>
+        	</tr>
+        	<tr>  </tr>
+            <tr>
+        		<td colspan="2" style="text-align:center;">
+                	<input type="radio" name="type" value="管理员">管理员登录
+      			 	<input type="radio" name="type" value="用户" checked>用户登录
+                </td>
+        	</tr>
+            <tr>
+            	<td height="120" colspan="2">
+                	<input  id="denglu" type="button" value="登录" style="width:60px; height:30px; cursor:pointer; outline:none; background-image:url(../img/nav_bg.png); color:#fff; font-size:14px; border:none;">
+                	
+                	<input  id="tuichu" type="button" value="取消" style="width:60px; height:30px; cursor:pointer; outline:none; background-image:url(../img/nav_bg.png); color:#fff; font-size:14px; border:none;">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
